@@ -1,0 +1,7 @@
+header {
+    display: flex;
+    /* pushes button to right */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
