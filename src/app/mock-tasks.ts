@@ -1,3 +1,5 @@
+// json-server --watch db.json
+// https://www.npmjs.com/package/json-server
 import { Task } from './Task';
 
 export const TASKS: Task[] = [
@@ -16,6 +18,12 @@ export const TASKS: Task[] = [
   {
     id: 3,
     text: 'Food Shopping',
+    day: 'May 7th at 12:30pm',
+    reminder: false,
+  },
+  {
+    id: 4,
+    text: 'Delete Test',
     day: 'May 7th at 12:30pm',
     reminder: false,
   },
