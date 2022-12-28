@@ -19,8 +19,10 @@ body {
   padding: 30px;
   border-radius: 5px;
 }
+
 .btn {
   display: inline-block;
+  /* affects BOTH buttons, add button specifically coded, onDelete in task-item html, green/red set in header html */
   background: #000;
   color: #fff;
   border: none;
@@ -32,11 +34,27 @@ body {
   font-size: 15px;
   font-family: inherit;
 }
+
+/* .btn:focus {
+  outline: none;
+} */
+
 .btn:focus {
   outline: none;
+  outline: 3px dashed orange;
+  outline-offset: 10px;
+  /* color: yellow; on click the BACKGROUND COLOR changes to yellow, in the button component background-color is set to color; overriding `color` set above in .btn */
+  color: yellow;
 }
+
 .btn:active {
   transform: scale(0.98);
+}
+
+/* ! hover can be problem on touch screen! */
+/* background text only, as above */
+.btn:hover {
+  color: blueviolet;
 }
 
 .btn-block {
