@@ -29,9 +29,11 @@ export class TasksComponent implements OnInit {
           () => (this.tasks = this.tasks.filter(t => t.id !== task.id)));
   }
 
+  // double click for reminder, won't work with inspect open
   toggleReminder(task: Task) {
     task.reminder = !task.reminder;
-    console.log(task.reminder);
+    this.taskService.updateTaskReminder(task).subscribe();
+    // console.log(task.reminder);
   }
 
   addTask(task: Task) {
